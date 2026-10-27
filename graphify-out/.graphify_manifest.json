@@ -1,0 +1,62 @@
+{
+  "SKILL.md": {
+    "sha256": "513266e942340cbd",
+    "bytes": 9259,
+    "kind": "doc"
+  },
+  "README.md": {
+    "sha256": "c009930e1c94a2d5",
+    "bytes": 2219,
+    "kind": "doc"
+  },
+  "references/architecture-and-tokens.md": {
+    "sha256": "74e142771e28c023",
+    "bytes": 2713,
+    "kind": "doc"
+  },
+  "scripts/measure-html-dom.mjs": {
+    "sha256": "bf1385cd09043724",
+    "bytes": 23673,
+    "kind": "code"
+  },
+  "scripts/compile-to-figma.mjs": {
+    "sha256": "afaa069b3ecd2ebd",
+    "bytes": 19431,
+    "kind": "code"
+  },
+  "scripts/figma-mcp.mjs": {
+    "sha256": "2cc1af334957e477",
+    "bytes": 9398,
+    "kind": "code"
+  },
+  "scripts/verify-figma-migration.mjs": {
+    "sha256": "292c2c0ac128edab",
+    "bytes": 6716,
+    "kind": "code"
+  },
+  ".cursor/hooks.json": {
+    "sha256": "b6eb7d06bec8941e",
+    "bytes": 298,
+    "kind": "config"
+  },
+  ".cursor/hooks/verify-figma-payload.sh": {
+    "sha256": "5f7b295e02152462",
+    "bytes": 1243,
+    "kind": "code"
+  },
+  "evals/evals.json": {
+    "sha256": "760c4ba9cfda4e13",
+    "bytes": 2871,
+    "kind": "test"
+  },
+  "evals/grade-evals.mjs": {
+    "sha256": "b4afc658221773b7",
+    "bytes": 10237,
+    "kind": "test"
+  },
+  "package.json": {
+    "sha256": "8528f94cf67314fb",
+    "bytes": 531,
+    "kind": "config"
+  }
+}

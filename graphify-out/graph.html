@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Graphify — tooling-agent-skill-multi_html-to-figma</title>
+  <style>
+    body { font-family: Inter, system-ui, sans-serif; background: #faf6ee; color: #16140f; margin: 0; padding: 32px; }
+    h1 { font-size: 24px; margin: 0 0 8px; }
+    p.meta { color: #625c51; font-size: 14px; margin: 0 0 24px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+    .card { background: #fffdf8; border: 1px solid #e0d9cb; border-radius: 12px; padding: 16px; }
+    .badge { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 12px; background: #f3ede0; color: #8c5a08; font-weight: 600; }
+    ul { padding-left: 18px; margin: 10px 0 0; font-size: 13px; line-height: 1.6; }
+  </style>
+</head>
+<body>
+  <h1>tooling-agent-skill-multi_html-to-figma — Knowledge Graph</h1>
+  <p class="meta">24 nodes · 28 edges · 3 communities</p>
+  <div class="grid">
+    <div class="card">
+      <span class="badge">Community 0 · Cohesion 0.94</span>
+      <h3 style="margin:8px 0 4px;">Skill Contract & Documentation</h3>
+      <ul>
+        <li><strong>SKILL.md (Skill Contract)</strong> <code>(doc)</code></li><li><strong>README.md (Quickstart & Architecture)</strong> <code>(doc)</code></li><li><strong>architecture-and-tokens.md (Wire Format & Tokens)</strong> <code>(doc)</code></li><li><strong>package.json (Task Scripts)</strong> <code>(config)</code></li>
+      </ul>
+    </div><div class="card">
+      <span class="badge">Community 1 · Cohesion 0.96</span>
+      <h3 style="margin:8px 0 4px;">DOM-to-Figma Compilation & MCP Pipeline</h3>
+      <ul>
+        <li><strong>measure-html-dom.mjs (Phase 1: Chromium DOM Extractor)</strong> <code>(code)</code></li><li><strong>findChromeBinary()</strong> <code>(function)</code></li><li><strong>measureHtmlFile()</strong> <code>(function)</code></li><li><strong>compile-to-figma.mjs (Phase 2: Tuple Compiler & Chunker)</strong> <code>(code)</code></li><li><strong>buildScriptForSubset()</strong> <code>(function)</code></li><li><strong>compileMeasuredToFiles()</strong> <code>(function)</code></li><li><strong>figma-mcp.mjs (Phase 3: Figma MCP Transport)</strong> <code>(code)</code></li><li><strong>resolveAuthToken()</strong> <code>(function)</code></li><li><strong>expandPartFiles()</strong> <code>(function)</code></li><li><strong>parseSseOrJson()</strong> <code>(function)</code></li><li><strong>getFigmaServerId()</strong> <code>(function)</code></li><li><strong>callMcp()</strong> <code>(function)</code></li><li><strong>ensureFigmaSession()</strong> <code>(function)</code></li>
+      </ul>
+    </div><div class="card">
+      <span class="badge">Community 2 · Cohesion 0.98</span>
+      <h3 style="margin:8px 0 4px;">Verification Gates, Cursor Hooks & Deterministic Evals</h3>
+      <ul>
+        <li><strong>verify-figma-migration.mjs (Phase 4: Parity Verifier)</strong> <code>(code)</code></li><li><strong>collectScriptParts()</strong> <code>(function)</code></li><li><strong>verifyMigration()</strong> <code>(function)</code></li><li><strong>hooks.json (Cursor Lifecycle Hooks)</strong> <code>(config)</code></li><li><strong>verify-figma-payload.sh (50KB & Token Guard)</strong> <code>(code)</code></li><li><strong>evals.json (4 Eval Specifications)</strong> <code>(test)</code></li><li><strong>grade-evals.mjs (Deterministic Eval Runner)</strong> <code>(test)</code></li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

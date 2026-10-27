@@ -1,0 +1,52 @@
+{
+  "skill_name": "html-to-figma",
+  "repository": "tooling-agent-skill-multi_html-to-figma",
+  "version": "1.0.0",
+  "evals": [
+    {
+      "id": 1,
+      "name": "dom-measurement-and-token-resolution",
+      "prompt": "Measure a multi-state HTML component containing CSS custom properties (var(--token)), inline SVG with stroke='currentColor', ::after pseudo-element indicator, range slider thumb, input value, and .sr-only visually hidden label.",
+      "expected_output": "Produces measured JSON where all CSS variables and currentColor strokes are resolved to computed rgb(...) strings, pseudo-elements and input thumbs are captured as boxes, and .sr-only nodes are excluded.",
+      "assertions": [
+        "Measured JSON contains the target component and story variant",
+        "Zero unresolved var(--) or currentColor strings in extracted items",
+        ".sr-only screen-reader text is excluded from visual items",
+        "Range thumb and ::after pseudo-element are emitted as box items"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "tuple-compilation-and-multipart-chunking",
+      "prompt": "Compile a multi-component measured DOM payload exceeding 46,000 characters into Figma Plugin scripts.",
+      "expected_output": "Automatically splits output into base .js and .partN.js continuation scripts, each <= 46,000 characters, using interned STRS and SVGS tables and isAppend=true for split component sets.",
+      "assertions": [
+        "Every generated script part is <= 46,000 characters",
+        "STRS, SVGS, and DATA tables are valid JSON literals",
+        "All input component variants are preserved across parts"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "migration-parity-verification-gate",
+      "prompt": "Run verify-figma-migration.mjs on both a valid compiled migration and a corrupted script containing an unresolved var(--token) or missing story variant.",
+      "expected_output": "Returns ok=true (STATUS: PASS) for the valid migration and ok=false (STATUS: FAIL) with specific diagnostics for the corrupted migration.",
+      "assertions": [
+        "Valid migration passes with 0 errors",
+        "Unresolved var(--) token is detected and rejected",
+        "Missing variant is detected and rejected"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "cursor-hook-payload-guardrail",
+      "prompt": "Trigger .cursor/hooks/verify-figma-payload.sh via simulated Cursor afterFileEdit / beforeShellExecution JSON stdin on valid (<46KB) and oversized (>50KB) build scripts.",
+      "expected_output": "Hook exits 0 on valid script and exits 2 (blocking execution) with diagnostic message on oversized or unresolved-token script.",
+      "assertions": [
+        "Hook exits 0 on valid compiled script",
+        "Hook exits 2 on script > 50,000 bytes",
+        "Hook exits 2 on script containing raw var(--)"
+      ]
+    }
+  ]
+}

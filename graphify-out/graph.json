@@ -1,0 +1,386 @@
+{
+  "repository": "tooling-agent-skill-multi_html-to-figma",
+  "generated_at": "2026-10-26T22:45:38.305Z",
+  "communities": {
+    "0": {
+      "name": "Skill Contract & Documentation",
+      "cohesion": 0.94
+    },
+    "1": {
+      "name": "DOM-to-Figma Compilation & MCP Pipeline",
+      "cohesion": 0.96
+    },
+    "2": {
+      "name": "Verification Gates, Cursor Hooks & Deterministic Evals",
+      "cohesion": 0.98
+    }
+  },
+  "nodes": [
+    {
+      "id": "SKILL.md",
+      "label": "SKILL.md (Skill Contract)",
+      "type": "doc",
+      "community": 0,
+      "bytes": 9259
+    },
+    {
+      "id": "README.md",
+      "label": "README.md (Quickstart & Architecture)",
+      "type": "doc",
+      "community": 0,
+      "bytes": 2219
+    },
+    {
+      "id": "references/architecture-and-tokens.md",
+      "label": "architecture-and-tokens.md (Wire Format & Tokens)",
+      "type": "doc",
+      "community": 0,
+      "bytes": 2713
+    },
+    {
+      "id": "scripts/measure-html-dom.mjs",
+      "label": "measure-html-dom.mjs (Phase 1: Chromium DOM Extractor)",
+      "type": "code",
+      "community": 1,
+      "bytes": 23673
+    },
+    {
+      "id": "scripts/measure-html-dom.mjs#findChromeBinary",
+      "label": "findChromeBinary()",
+      "type": "function",
+      "community": 1,
+      "source_file": "scripts/measure-html-dom.mjs"
+    },
+    {
+      "id": "scripts/measure-html-dom.mjs#measureHtmlFile",
+      "label": "measureHtmlFile()",
+      "type": "function",
+      "community": 1,
+      "source_file": "scripts/measure-html-dom.mjs"
+    },
+    {
+      "id": "scripts/compile-to-figma.mjs",
+      "label": "compile-to-figma.mjs (Phase 2: Tuple Compiler & Chunker)",
+      "type": "code",
+      "community": 1,
+      "bytes": 19431
+    },
+    {
+      "id": "scripts/compile-to-figma.mjs#buildScriptForSubset",
+      "label": "buildScriptForSubset()",
+      "type": "function",
+      "community": 1,
+      "source_file": "scripts/compile-to-figma.mjs"
+    },
+    {
+      "id": "scripts/compile-to-figma.mjs#compileMeasuredToFiles",
+      "label": "compileMeasuredToFiles()",
+      "type": "function",
+      "community": 1,
+      "source_file": "scripts/compile-to-figma.mjs"
+    },
+    {
+      "id": "scripts/figma-mcp.mjs",
+      "label": "figma-mcp.mjs (Phase 3: Figma MCP Transport)",
+      "type": "code",
+      "community": 1,
+      "bytes": 9398
+    },
+    {
+      "id": "scripts/figma-mcp.mjs#resolveAuthToken",
+      "label": "resolveAuthToken()",
+      "type": "function",
+      "community": 1,
+      "source_file": "scripts/figma-mcp.mjs"
+    },
+    {
+      "id": "scripts/figma-mcp.mjs#expandPartFiles",
+      "label": "expandPartFiles()",
+      "type": "function",
+      "community": 1,
+      "source_file": "scripts/figma-mcp.mjs"
+    },
+    {
+      "id": "scripts/figma-mcp.mjs#parseSseOrJson",
+      "label": "parseSseOrJson()",
+      "type": "function",
+      "community": 1,
+      "source_file": "scripts/figma-mcp.mjs"
+    },
+    {
+      "id": "scripts/figma-mcp.mjs#getFigmaServerId",
+      "label": "getFigmaServerId()",
+      "type": "function",
+      "community": 1,
+      "source_file": "scripts/figma-mcp.mjs"
+    },
+    {
+      "id": "scripts/figma-mcp.mjs#callMcp",
+      "label": "callMcp()",
+      "type": "function",
+      "community": 1,
+      "source_file": "scripts/figma-mcp.mjs"
+    },
+    {
+      "id": "scripts/figma-mcp.mjs#ensureFigmaSession",
+      "label": "ensureFigmaSession()",
+      "type": "function",
+      "community": 1,
+      "source_file": "scripts/figma-mcp.mjs"
+    },
+    {
+      "id": "scripts/verify-figma-migration.mjs",
+      "label": "verify-figma-migration.mjs (Phase 4: Parity Verifier)",
+      "type": "code",
+      "community": 2,
+      "bytes": 6716
+    },
+    {
+      "id": "scripts/verify-figma-migration.mjs#collectScriptParts",
+      "label": "collectScriptParts()",
+      "type": "function",
+      "community": 2,
+      "source_file": "scripts/verify-figma-migration.mjs"
+    },
+    {
+      "id": "scripts/verify-figma-migration.mjs#verifyMigration",
+      "label": "verifyMigration()",
+      "type": "function",
+      "community": 2,
+      "source_file": "scripts/verify-figma-migration.mjs"
+    },
+    {
+      "id": ".cursor/hooks.json",
+      "label": "hooks.json (Cursor Lifecycle Hooks)",
+      "type": "config",
+      "community": 2,
+      "bytes": 298
+    },
+    {
+      "id": ".cursor/hooks/verify-figma-payload.sh",
+      "label": "verify-figma-payload.sh (50KB & Token Guard)",
+      "type": "code",
+      "community": 2,
+      "bytes": 1243
+    },
+    {
+      "id": "evals/evals.json",
+      "label": "evals.json (4 Eval Specifications)",
+      "type": "test",
+      "community": 2,
+      "bytes": 2871
+    },
+    {
+      "id": "evals/grade-evals.mjs",
+      "label": "grade-evals.mjs (Deterministic Eval Runner)",
+      "type": "test",
+      "community": 2,
+      "bytes": 10237
+    },
+    {
+      "id": "package.json",
+      "label": "package.json (Task Scripts)",
+      "type": "config",
+      "community": 0,
+      "bytes": 531
+    }
+  ],
+  "edges": [
+    {
+      "source": "SKILL.md",
+      "target": "references/architecture-and-tokens.md",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "score": 1
+    },
+    {
+      "source": "SKILL.md",
+      "target": "scripts/measure-html-dom.mjs",
+      "relation": "orchestrates_phase_1",
+      "confidence": "EXTRACTED",
+      "score": 1
+    },
+    {
+      "source": "SKILL.md",
+      "target": "scripts/compile-to-figma.mjs",
+      "relation": "orchestrates_phase_2",
+      "confidence": "EXTRACTED",
+      "score": 1
+    },
+    {
+      "source": "SKILL.md",
+      "target": "scripts/figma-mcp.mjs",
+      "relation": "orchestrates_phase_3",
+      "confidence": "EXTRACTED",
+      "score": 1
+    },
+    {
+      "source": "SKILL.md",
+      "target": "scripts/verify-figma-migration.mjs",
+      "relation": "orchestrates_phase_4",
+      "confidence": "EXTRACTED",
+      "score": 1
+    },
+    {
+      "source": "SKILL.md",
+      "target": ".cursor/hooks.json",
+      "relation": "enforces_guardrails",
+      "confidence": "EXTRACTED",
+      "score": 1
+    },
+    {
+      "source": "SKILL.md",
+      "target": "evals/evals.json",
+      "relation": "validated_by",
+      "confidence": "EXTRACTED",
+      "score": 1
+    },
+    {
+      "source": ".cursor/hooks.json",
+      "target": ".cursor/hooks/verify-figma-payload.sh",
+      "relation": "invokes",
+      "confidence": "EXTRACTED",
+      "score": 1
+    },
+    {
+      "source": "scripts/verify-figma-migration.mjs",
+      "target": "scripts/compile-to-figma.mjs",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "score": 1
+    },
+    {
+      "source": "evals/grade-evals.mjs",
+      "target": "evals/evals.json",
+      "relation": "grades",
+      "confidence": "EXTRACTED",
+      "score": 1
+    },
+    {
+      "source": "evals/grade-evals.mjs",
+      "target": "scripts/measure-html-dom.mjs",
+      "relation": "tests",
+      "confidence": "EXTRACTED",
+      "score": 1
+    },
+    {
+      "source": "evals/grade-evals.mjs",
+      "target": "scripts/compile-to-figma.mjs",
+      "relation": "tests",
+      "confidence": "EXTRACTED",
+      "score": 1
+    },
+    {
+      "source": "evals/grade-evals.mjs",
+      "target": "scripts/verify-figma-migration.mjs",
+      "relation": "tests",
+      "confidence": "EXTRACTED",
+      "score": 1
+    },
+    {
+      "source": "evals/grade-evals.mjs",
+      "target": ".cursor/hooks/verify-figma-payload.sh",
+      "relation": "tests",
+      "confidence": "EXTRACTED",
+      "score": 1
+    },
+    {
+      "source": "package.json",
+      "target": "scripts/measure-html-dom.mjs",
+      "relation": "runs_self_test",
+      "confidence": "EXTRACTED",
+      "score": 1
+    },
+    {
+      "source": "package.json",
+      "target": "evals/grade-evals.mjs",
+      "relation": "runs_eval_suite",
+      "confidence": "EXTRACTED",
+      "score": 1
+    },
+    {
+      "source": "scripts/measure-html-dom.mjs",
+      "target": "scripts/measure-html-dom.mjs#findChromeBinary",
+      "relation": "exports",
+      "confidence": "EXTRACTED",
+      "score": 1
+    },
+    {
+      "source": "scripts/measure-html-dom.mjs",
+      "target": "scripts/measure-html-dom.mjs#measureHtmlFile",
+      "relation": "exports",
+      "confidence": "EXTRACTED",
+      "score": 1
+    },
+    {
+      "source": "scripts/compile-to-figma.mjs",
+      "target": "scripts/compile-to-figma.mjs#buildScriptForSubset",
+      "relation": "exports",
+      "confidence": "EXTRACTED",
+      "score": 1
+    },
+    {
+      "source": "scripts/compile-to-figma.mjs",
+      "target": "scripts/compile-to-figma.mjs#compileMeasuredToFiles",
+      "relation": "exports",
+      "confidence": "EXTRACTED",
+      "score": 1
+    },
+    {
+      "source": "scripts/figma-mcp.mjs",
+      "target": "scripts/figma-mcp.mjs#resolveAuthToken",
+      "relation": "exports",
+      "confidence": "EXTRACTED",
+      "score": 1
+    },
+    {
+      "source": "scripts/figma-mcp.mjs",
+      "target": "scripts/figma-mcp.mjs#expandPartFiles",
+      "relation": "exports",
+      "confidence": "EXTRACTED",
+      "score": 1
+    },
+    {
+      "source": "scripts/figma-mcp.mjs",
+      "target": "scripts/figma-mcp.mjs#parseSseOrJson",
+      "relation": "exports",
+      "confidence": "EXTRACTED",
+      "score": 1
+    },
+    {
+      "source": "scripts/figma-mcp.mjs",
+      "target": "scripts/figma-mcp.mjs#getFigmaServerId",
+      "relation": "exports",
+      "confidence": "EXTRACTED",
+      "score": 1
+    },
+    {
+      "source": "scripts/figma-mcp.mjs",
+      "target": "scripts/figma-mcp.mjs#callMcp",
+      "relation": "exports",
+      "confidence": "EXTRACTED",
+      "score": 1
+    },
+    {
+      "source": "scripts/figma-mcp.mjs",
+      "target": "scripts/figma-mcp.mjs#ensureFigmaSession",
+      "relation": "exports",
+      "confidence": "EXTRACTED",
+      "score": 1
+    },
+    {
+      "source": "scripts/verify-figma-migration.mjs",
+      "target": "scripts/verify-figma-migration.mjs#collectScriptParts",
+      "relation": "exports",
+      "confidence": "EXTRACTED",
+      "score": 1
+    },
+    {
+      "source": "scripts/verify-figma-migration.mjs",
+      "target": "scripts/verify-figma-migration.mjs#verifyMigration",
+      "relation": "exports",
+      "confidence": "EXTRACTED",
+      "score": 1
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "hooks": {
+    "afterFileEdit": [
+      {
+        "command": ".cursor/hooks/verify-figma-payload.sh"
+      }
+    ],
+    "beforeShellExecution": [
+      {
+        "command": ".cursor/hooks/verify-figma-payload.sh",
+        "matcher": "figma-mcp\\.mjs\\s+use"
+      }
+    ]
+  }
+}

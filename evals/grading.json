@@ -1,0 +1,106 @@
+{
+  "skill_name": "html-to-figma",
+  "repository": "tooling-agent-skill-multi_html-to-figma",
+  "summary": {
+    "total_evals": 4,
+    "passed_evals": 4,
+    "total_assertions": 13,
+    "passed_assertions": 13,
+    "pass_rate": 1
+  },
+  "results": [
+    {
+      "id": 1,
+      "name": "dom-measurement-and-token-resolution",
+      "passed": true,
+      "assertions": [
+        {
+          "text": "Measured JSON contains the target component and story variant",
+          "passed": true,
+          "evidence": "AlertBanner/Default rootRect=[400,124], items=8"
+        },
+        {
+          "text": "Zero unresolved var(--) or currentColor strings in extracted items",
+          "passed": true,
+          "evidence": "0 occurrences of var(--) or currentColor in serialized items"
+        },
+        {
+          "text": ".sr-only screen-reader text is excluded from visual items",
+          "passed": true,
+          "evidence": ".sr-only node excluded from visual item list"
+        },
+        {
+          "text": "Range thumb and ::after pseudo-element are emitted as box items",
+          "passed": true,
+          "evidence": "Both tag=\"after\" and tag=\"thumb\" present in measured items"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "tuple-compilation-and-multipart-chunking",
+      "passed": true,
+      "assertions": [
+        {
+          "text": "Every generated script part is <= 46,000 characters",
+          "passed": true,
+          "evidence": "Split into 3 parts, max length=45637 chars (<= 46,000)"
+        },
+        {
+          "text": "STRS, SVGS, and DATA tables are valid JSON literals",
+          "passed": true,
+          "evidence": "STRS, SVGS, DATA parsed cleanly across all 3 parts"
+        },
+        {
+          "text": "All input component variants are preserved across parts",
+          "passed": true,
+          "evidence": "Preserved 70/70 variants across parts"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "migration-parity-verification-gate",
+      "passed": true,
+      "assertions": [
+        {
+          "text": "Valid migration passes with 0 errors",
+          "passed": true,
+          "evidence": "Valid migration ok=true"
+        },
+        {
+          "text": "Unresolved var(--) token is detected and rejected",
+          "passed": true,
+          "evidence": "Detected unresolved token: Unresolved CSS variable in STRS of /var/folders/hm/pxv483k16wv0nc3ks9fvxpnw0000gp/T/eval3-4UkQuW/build.js: var(--surface-paper)"
+        },
+        {
+          "text": "Missing variant is detected and rejected",
+          "passed": true,
+          "evidence": "Detected missing variant: Variant Card/Story=Elevated missing from compiled scripts."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "cursor-hook-payload-guardrail",
+      "passed": true,
+      "assertions": [
+        {
+          "text": "Hook exits 0 on valid compiled script",
+          "passed": true,
+          "evidence": "Valid script exit code=0"
+        },
+        {
+          "text": "Hook exits 2 on script > 50,000 bytes",
+          "passed": true,
+          "evidence": "Oversized script exit code=2 (BLOCKED: Figma payload /var/folders/hm/pxv483k16wv0nc3ks9fvxpnw0000gp/T/eval4-OQwY47/build-oversized.js is 51013 bytes (> 50,000 limit). Run compile-to-figma.mjs to split into .partN.js chunks.)"
+        },
+        {
+          "text": "Hook exits 2 on script containing raw var(--)",
+          "passed": true,
+          "evidence": "Unresolved var(--) script exit code=2 (BLOCKED: Figma payload /var/folders/hm/pxv483k16wv0nc3ks9fvxpnw0000gp/T/eval4-OQwY47/build-unresolved.js contains unresolved CSS variable var(--...). Resolve computed styles in headless Chromium first.)"
+        }
+      ]
+    }
+  ]
+}

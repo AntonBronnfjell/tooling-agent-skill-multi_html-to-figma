@@ -1,0 +1,17 @@
+{
+  "name": "tooling-agent-skill-multi_html-to-figma",
+  "version": "1.0.0",
+  "description": "Agentic HTML-to-Figma migration and verification skill with headless Chromium DOM measurement, tuple compilation, Cursor hooks, and deterministic evals.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AntonBronnfjell/tooling-agent-skill-multi_html-to-figma.git"
+  },
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "node scripts/measure-html-dom.mjs --self-test && node evals/grade-evals.mjs",
+    "eval": "node evals/grade-evals.mjs",
+    "verify": "node scripts/verify-figma-migration.mjs --self-test"
+  },
+  "license": "MIT"
+}
